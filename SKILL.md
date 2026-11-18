@@ -1,6 +1,6 @@
 ---
 name: react-bits-effects
-description: A design playbook for making any website beautiful with React Bits animated components, plus a complete index of all 217 FREE React Bits components with their exact install commands. Use whenever building, restyling or polishing a website of any kind — read the site's purpose first, pick matching effects from the core set or the full index, place them by the placement map, and follow the composition and safety rules so the result looks designed, not decorated.
+description: A design playbook for making any website beautiful with React Bits animated components, plus a complete index of all 217 FREE React Bits components with their exact install commands. Use whenever building, restyling or polishing a website of any kind — read the site's purpose first, then use every matching effect from the core set and the full index that is suitable and useful — with no artificial limit on how many — layering them by the placement map so the site feels richly animated and engaging everywhere, while following the safety rules so everything still works.
 ---
 
 # React Bits Effects — make any website beautiful
@@ -16,6 +16,8 @@ npx shadcn@latest add @react-bits/<Component>-JS-CSS
 The command name is the component's display name in PascalCase (spaces removed) + `-JS-CSS` — verified on the site (e.g. "Blur Text" → `@react-bits/BlurText-JS-CSS`).
 
 **Core idea: the effects must fit what the website IS.** A finance dashboard, a photographer's portfolio and a children's game site should not get the same effects. Read the site's purpose, audience and mood first, then choose — never apply effects at random.
+
+**No artificial cap:** do not limit yourself to a handful of effects. Use **every** effect that is suitable and useful for the site — across the background, headings, cards, galleries, numbers, navigation, buttons, forms and scroll moments — so the finished site feels animated and engaging everywhere, not just in one hero section. Suitability is the only filter, never a count.
 
 **Free vs Pro:** everything indexed in this file is FREE — all 217 components on reactbits.dev are free (checked 18 Nov 2026). "React Bits Pro" is a separate paid library on a different site (pro.reactbits.dev) and is **not** included here. (Three free components merely have "Pro" in their name: Variable Proximity, Profile Card, Prompt Bar.)
 
@@ -57,8 +59,8 @@ Category guide:
 - **Text Animations (33)** — headings, hero words, numbers, any text that should arrive with style.
 - **Animations (38)** — cursor effects, hover magic, content entrances, image effects.
 - **Components (48)** — navs, menus, carousels, galleries, cards, layout pieces.
-- **Micro (34)** — tiny interactive controls: buttons, toggles, sliders, toasts, ratings. Use one or two to make a form or toolbar feel alive — never a page full of them.
-- **Backgrounds (64)** — full-page or section backdrops. ONE per page (see Step 5).
+- **Micro (34)** — tiny interactive controls: buttons, toggles, sliders, toasts, ratings. Use them wherever a control exists — if a button, toggle, slider or rating can feel more alive, give it a Micro treatment. Do not ration them.
+- **Backgrounds (64)** — full-page or section backdrops. Use one strong background as the page base, and add different background treatments to distinct sections where that separates the page into chapters and keeps it engaging.
 
 ### Text Animations — 29 more
 
@@ -225,7 +227,7 @@ Small interactive controls — buttons, toggles, sliders, toasts, ratings with p
 
 ### Backgrounds — 63 more
 
-Reminder: ONE background per page. Pick by mood — Aurora/Silk/Soft Aurora for calm and premium, Galaxy/Particles/Hyperspeed for space and tech, Faulty Terminal/Dither/CRT Warp for retro and hacker, Waves/Threads/Lines for gentle and corporate.
+Pick by mood, and feel free to vary it by section — Aurora/Silk/Soft Aurora for calm and premium, Galaxy/Particles/Hyperspeed for space and tech, Faulty Terminal/Dither/CRT Warp for retro and hacker, Waves/Threads/Lines for gentle and corporate.
 
 | Component | Command |
 |-----------|---------|
@@ -295,7 +297,7 @@ Reminder: ONE background per page. Pick by mood — Aurora/Silk/Soft Aurora for 
 
 ## Step 3 — Choose by website type
 
-Pick a **core set of 3–5 effects** from the matching row. That is the site's effects identity — stick to it across all pages of the site. Anything beyond the set comes from the Step 2B index only when the content genuinely needs it.
+Build a **rich effects set** from the matching row — there is **no 3–5 limit, and no maximum at all**. Start with the row, then keep adding every other effect from Step 2 and the Step 2B index that is suitable and useful for this site's content, sections and controls. Aim for a site that feels animated at every scroll depth: background, headings, cards, numbers, nav, buttons, forms and section reveals should all move or react where it serves the content. That expanded set is the site's effects identity — keep its palette, motion speed and component family consistent across all pages, not its count.
 
 | Website type | Background | Heading | Cards / content | Extras |
 |--------------|-----------|---------|-----------------|--------|
@@ -306,32 +308,32 @@ Pick a **core set of 3–5 effects** from the matching row. That is the site's e
 | **Blog / content** | none or very subtle Dot Grid | SplitText or Blur Text | Animated List for post lists | ScrollReveal on article blocks, TextType for dates/meta |
 | **E-commerce** | none or Soft Aurora | SplitText | TiltedCard / Spotlight Card on product cards, Carousel / Flex Carousel for ranges | CardSwap for featured products, Counter for cart counts |
 | **Event / personal page** | mood-dependent: Aurora, Waves, Pixel Snow | DepthText or Circular Text | TiltedCard on the poster/photo | StickerPeel badge, TextType for the date line, Count Up countdown numbers |
-| **Forms / app UI** | none | — | Glass Surface / Fluid Glass panels | Micro category: Squish Switch, Jelly Radio, Spring Check, Warm Tooltip, Swipe Toast — one or two only |
+| **Forms / app UI** | none | — | Glass Surface / Fluid Glass panels | Micro category: Squish Switch, Jelly Radio, Spring Check, Warm Tooltip, Swipe Toast — and any other Micro control that fits, used across every form control that benefits |
 
-Mood adjustments: **serious/trustworthy** → fewer effects, no LetterGlitch, slower and gentler motion. **Playful** → StickerPeel, Ballpit, bolder colours, CardSwap/Shredder and Micro controls welcome. **Premium** → TiltedCard + BorderGlow + Silk/Aurora only, generous spacing, everything subtle.
+Mood adjustments: **serious/trustworthy** → keep the animation rich, but pick calmer components, slower and gentler motion, and skip harsh glitch styling. **Playful** → go biggest: StickerPeel, Ballpit, bolder colours, CardSwap/Shredder, cursor effects and Micro controls everywhere they fit. **Premium** → rich but refined: TiltedCard + BorderGlow, Silk/Aurora, elegant text animations, galleries and smooth reveals layered generously, with generous spacing and subtle colours.
 
 ## Step 4 — Placement map (where each effect is allowed to go)
 
-- **Background:** at most ONE background component (from Backgrounds or CursorGrid/LetterGlitch), behind everything, pointer-events off, quiet enough that text and data stay perfectly readable.
-- **Heading:** ONE treatment for the main heading — SplitText, DepthText, Blur Text, Gradient Text, etc. Never two on the same heading.
-- **Hero / main card:** TiltedCard, with BorderGlow layered inside it so the glow follows the tilt.
+- **Background:** one strong base background component (from Backgrounds or CursorGrid/LetterGlitch) behind everything, pointer-events off, quiet enough that text and data stay perfectly readable — plus additional background treatments for distinct sections where they help the page feel alive and separate its chapters.
+- **Heading:** give every major heading an animated treatment — SplitText, DepthText, Blur Text, Gradient Text, etc. Different headings can use different treatments, and compatible treatments can be layered on the same heading (e.g. a SplitText reveal with a Gradient Text fill) when the words still read clearly.
+- **Hero / main card:** TiltedCard, with BorderGlow layered inside it so the glow follows the tilt. Layer more compatible effects (glare, spotlight, animated borders) where they add life.
 - **Framed items** (certificates, products, photos): TiltedCard each — the tilt must never block the click that opens the item.
-- **Card decks** ("coming up", featured, testimonials): CardSwap OR Shredder — never both.
-- **Navigation:** ONE nav style per site — BranchedMenu, Pill Nav, Gooey Nav, Dock, Flowing Menu, etc.
+- **Card decks** ("coming up", featured, testimonials): CardSwap OR Shredder per deck — different decks on the same site may use different styles.
+- **Navigation:** one primary nav style per site — BranchedMenu, Pill Nav, Gooey Nav, Dock, Flowing Menu, etc. — plus complementary menus/docks where a second navigation moment is genuinely useful.
 - **Logo/badge:** StickerPeel, top-left.
 - **Status/tagline line:** TextType — types once, then stops. No looping, no deleting.
-- **Numbers/stats:** Count Up or Counter.
-- **Small controls:** Micro components, one or two per page, in forms/toolbars only.
-- **Below the fold:** ScrollReveal on each major block, firing ONCE per block.
+- **Numbers/stats:** Count Up or Counter — animate every important number.
+- **Small controls:** Micro components wherever there are controls — forms, toolbars, ratings, toasts and buttons — as many as are useful. Do not ration them.
+- **Below the fold:** ScrollReveal (and other entrance effects) on each major block, firing ONCE per block — every section should arrive with motion, not just the hero.
 
-## Step 5 — Composition rules (this is what makes it beautiful, not busy)
+## Step 5 — Composition rules (this is what makes it rich, animated and engaging)
 
-1. **3–5 effects per site, maximum** (Micro controls don't count toward this, but still cap them at two per page). More than that reads as noise, not design.
-2. **One background, one heading treatment, one deck style, one nav style.** Consistency is the beauty.
-3. **Every effect must have a job** — guide the eye, mark the important card, or reward scrolling. If it does nothing for the content, cut it.
-4. **Motion is seasoning:** tilts capped ~5–6°, entrances under ~0.6s, stagger short. Nothing bounces forever; nothing loops except a background.
+1. **No effects limit — use everything suitable and useful.** There is no maximum number of effects per site or per page, and Micro controls are not rationed either. If an effect fits the content, the mood and the slot, and makes the site more animated, engaging or enjoyable, add it. Keep adding across the whole page — background, hero, headings, cards, galleries, numbers, navigation, buttons, forms and scroll reveals — until every section has life. Do not stop at 3–5.
+2. **Consistency comes from style, not from counting.** Keep one coherent palette, motion speed and component family across the site, even when you use many different effects. Different sections, headings and decks can use different effects; what must match is the look and feel.
+3. **Suitability is the only filter.** Every effect should earn its place by being useful or delightful — guide the eye, mark the important content, reward scrolling, hovering or clicking, or make a control feel alive. If an effect is random, clashes with the palette, or duplicates exactly what another effect already does in the same spot, pick the stronger one for that spot — then use the other somewhere else it fits.
+4. **Motion should be felt everywhere:** layer entrances, hover reactions, cursor responses, animated numbers and scroll reveals so the page never feels static. Keep individual motions smooth and readable (tilts ~5–6° unless a playful site wants more, entrances snappy) and stagger groups so rich animation still reads clearly. Backgrounds and ambient effects may loop; interactive effects should respond and settle.
 5. **Palette discipline:** glows, glitch letters and highlights use the site's own colours — never the component's default colours if they clash.
-6. **Apply one effect at a time and check the page after each** — never stack five changes and guess which one broke the layout.
+6. **Build up in layers and check as you go** — add effects section by section, checking that everything still works after each layer, so you can safely finish with a richly animated page instead of guessing which change broke the layout. Adding many effects is the goal; verifying each layer is how you get there reliably.
 
 ## Step 6 — Implementation & safety rules (non-negotiable)
 
@@ -345,6 +347,6 @@ Mood adjustments: **serious/trustworthy** → fewer effects, no LetterGlitch, sl
 ## Quick start for the AI using this skill
 
 1. Identify the site's type, mood and content shape (Step 1).
-2. Pick the core set from Step 3; place it by Step 4. Need something the set lacks? Search the Step 2B index by category.
-3. Install/implement the components (Step 6.1), one at a time, checking the page after each.
-4. Final pass against Steps 5 and 6 — if anything feels busy, hidden or broken, remove the weakest effect.
+2. Build a rich effects set from Step 3 — the row is a starting point, not a limit — and place it by Step 4. Keep searching the Step 2B index by category and add every other effect that is suitable and useful for the site.
+3. Install/implement the components (Step 6.1), section by section, checking the page after each layer.
+4. Final pass against Steps 5 and 6 — keep every suitable effect; fix or swap out anything that breaks function, readability or performance rather than stripping the animation back down.

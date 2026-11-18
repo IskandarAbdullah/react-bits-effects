@@ -7,9 +7,9 @@ A design playbook that teaches any AI assistant how to make a website beautiful 
 Give [`SKILL.md`](./SKILL.md) to your AI (Claude, ChatGPT, Cursor, Copilot — any assistant that can read a skill/instructions file), then ask it to build or restyle your website. The AI will:
 
 1. Read your site's type, mood and content shape first
-2. Pick a core set of 3–5 effects that match (dashboard, portfolio, landing page, gallery, blog, e-commerce, event page…)
-3. Place them by the placement map — one background, one heading treatment, one deck style
-4. Follow the composition and safety rules — motion stays subtle, content is never hidden, everything still works on touch and reduced-motion
+2. Build a rich set of effects that match (dashboard, portfolio, landing page, gallery, blog, e-commerce, event page…) — **no limit on how many**: every effect that is suitable and useful gets used, so the site feels animated and engaging everywhere
+3. Place them by the placement map — layered backgrounds and section treatments, animated headings, cards, galleries, numbers, nav and controls
+4. Follow the composition and safety rules — animation stays readable, content is never hidden, everything still works on touch and reduced-motion
 
 ## What's inside SKILL.md
 
